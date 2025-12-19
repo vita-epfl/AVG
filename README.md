@@ -10,7 +10,7 @@ VITA @ EPFL
 *Equal contribution
 
 <a href="https://arxiv.org/abs/2512.16371"><img src="https://img.shields.io/badge/arXiv-2512.16371-b31b1b"></a>
-<a href="#"><img src="https://img.shields.io/badge/Project-Page-green"></a>
+<a href="https://vita-epfl.github.io/FVG/"><img src="https://img.shields.io/badge/Project-Page-green"></a>
 
 </div>
 
