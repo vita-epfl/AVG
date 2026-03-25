@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Factorized Video Generation: Decoupling Scene Construction and Temporal Synthesis in Text-to-Video Diffusion Models</title>
+  <title>Anchored Video Generation: Decoupling Scene Construction and Temporal Synthesis in Text-to-Video Diffusion Models</title>
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&display=swap" rel="stylesheet">
@@ -93,7 +93,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 paper-title">
-            <span class="funky-title"> ✨ Factorized Video Generation</span>
+            <span class="funky-title"> ✨ Anchored Video Generation</span>
             <span class="normal-title">
               Decoupling Scene Construction and Temporal Synthesis in Text-to-Video Diffusion Models
             </span>
@@ -128,7 +128,7 @@
       
       <!-- Code Link -->
       <span class="link-block" style="margin-left: 10px;">
-        <a href="https://github.com/vita-epfl/FVG/tree/main" 
+        <a href="https://github.com/vita-epfl/AVG/tree/main" 
           class="external-link button is-normal is-rounded is-dark">
           <span class="icon">
             <i class="fab fa-github"></i>
@@ -150,8 +150,7 @@
         <h2 class="title is-2">Abstract</h2>
         <p class="section-description">
           State-of-the-art Text-to-Video (T2V) diffusion models can generate visually impressive results, yet they still frequently fail to compose complex scenes or follow logical temporal instructions. In this paper, we argue that many errors, including apparent motion failures, originate from the model's inability to construct a semantically correct or logically consistent initial frame.
-            We introduce Factorized Video Generation (FVG), a pipeline that decouples these tasks by decomposing the Text-to-Video generation into three specialized stages: (1) Reasoning, where a Large Language Model (LLM) rewrites the video prompt to describe only the initial scene, resolving temporal ambiguities; (2) Composition, where a Text-to-Image (T2I) model synthesizes a high-quality, compositionally-correct anchor frame from this new prompt; and (3) Temporal Synthesis, where a video model, finetuned to understand this anchor, focuses its entire capacity on animating the scene and following the prompt. Our decomposed approach sets a new state-of-the-art on the T2V CompBench benchmark and significantly improves all tested models on VBench2. Furthermore, we show that visual anchoring allows us to cut the number of sampling steps by 70% without any loss in performance, leading to a substantial speed-up in sampling. Factorized Video Generation offers a simple yet practical path toward more efficient, robust, and controllable video synthesis.
-        </p>
+          We introduce Anchored Video Generation (AVG), a modular pipeline that decouples these tasks by decomposing the Text-to-Video generation into three specialized stages: (1) Reasoning, where a Large Language Model (LLM) rewrites the video prompt to describe only the initial scene, resolving temporal ambiguities; (2) Composition, where a Text-to-Image (T2I) model synthesizes a high-quality, compositionally-correct anchor frame from this new prompt; and (3) Temporal Synthesis, where a video model, finetuned to understand this anchor, focuses its entire capacity on animating the scene and following the prompt. Our approach sets a new state-of-the-art on the T2V CompBench benchmark and significantly improves all tested models on VBench2. Furthermore, we show that visual anchoring allows us to cut the number of sampling steps by 70\% without any loss in performance. AVG offers a simple yet practical path toward more efficient, robust, and controllable video synthesis.</p>
       </div>
     </div>
   </div>
@@ -164,9 +163,9 @@
   <!-- Comparison Section -->
   <section class="section">
     <div class="container is-max-desktop">
-      <h2 class="title is-2 has-text-centered">Text-to-Video vs Factorized Video Generation </h2>
+      <h2 class="title is-2 has-text-centered">Text-to-Video vs Anchored Video Generation </h2>
       <p class="section-description">
-        Each example shows the same text prompt (caption) and the corresponding videos from a standard text-to-video model (T2V) and our factorized model.
+        Each example shows the same text prompt (caption) and the corresponding videos from a standard text-to-video model (T2V) and our anchored model.
       </p>
 
       <!-- 1 -->
@@ -180,7 +179,7 @@
             </video>
           </div>
           <div class="video-col">
-            <h3>Wan2.2 Factorized </h3>
+            <h3>Anchored Wan2.2 </h3>
             <video autoplay muted loop playsinline preload="metadata">
               <source src="./static/videos/fvg/A bee lands on a flower and a butterfly dances around the petals.mp4" type="video/mp4">
             </video>
@@ -199,7 +198,7 @@
             </video>
           </div>
           <div class="video-col">
-            <h3>Wan2.2 Factorized </h3>
+            <h3>Anchored Wan2.2 </h3>
             <video autoplay muted loop playsinline preload="metadata">
               <source src="./static/videos/fvg/A pig cooks in a chef's hat and a chicken tastes the sauce.mp4" type="video/mp4">
             </video>
@@ -218,7 +217,7 @@
             </video>
           </div>
           <div class="video-col">
-            <h3>Wan2.2 Factorized </h3>
+            <h3>Anchored Wan2.2 </h3>
             <video autoplay muted loop playsinline preload="metadata">
               <source src="./static/videos/fvg/A butterfly is flitting from one flower to the next, while a gardener is trimming the hedges carefully..mp4" type="video/mp4">
             </video>
@@ -237,7 +236,7 @@
             </video>
           </div>
           <div class="video-col">
-            <h3>Wan2.2 Factorized </h3>
+            <h3>Anchored Wan2.2 </h3>
             <video autoplay muted loop playsinline preload="metadata">
               <source src="./static/videos/fvg/A parrot hosts a talk show and a duck claps.mp4" type="video/mp4">
             </video>
@@ -256,7 +255,7 @@
             </video>
           </div>
           <div class="video-col">
-            <h3>Wan2.2 Factorized </h3>
+            <h3>Anchored Wan2.2 </h3>
             <video autoplay muted loop playsinline preload="metadata">
               <source src="./static/videos/fvg/A cat DJ at a party, a dog dances with glow sticks.mp4" type="video/mp4">
             </video>
@@ -275,7 +274,7 @@
             </video>
           </div>
           <div class="video-col">
-            <h3>Wan2.2 Factorized </h3>
+            <h3>Anchored Wan2.2 </h3>
             <video autoplay muted loop playsinline preload="metadata">
               <source src="./static/videos/fvg/A frog plays drums on lily pads, a snail sways along with the beats.mp4" type="video/mp4">
             </video>
@@ -294,7 +293,7 @@
             </video>
           </div>
           <div class="video-col">
-            <h3>Wan2.2 Factorized </h3>
+            <h3>Anchored Wan2.2 </h3>
             <video autoplay muted loop playsinline preload="metadata">
               <source src="./static/videos/fvg/A cat takes selfies while a dog rides a skateboard in the background..mp4" type="video/mp4">
             </video>
@@ -314,7 +313,7 @@
             </video>
           </div>
           <div class="video-col">
-            <h3>Wan2.2 Factorized </h3>
+            <h3>Anchored Wan2.2 </h3>
             <video autoplay muted loop playsinline preload="metadata">
               <source src="./static/videos/fvg/A fish swims gracefully in a tank as a horse gallops outside.mp4" type="video/mp4">
             </video>
@@ -333,7 +332,7 @@
             </video>
           </div>
           <div class="video-col">
-            <h3>Wan2.2 Factorized </h3>
+            <h3>Anchored Wan2.2 </h3>
             <video autoplay muted loop playsinline preload="metadata">
               <source src="./static/videos/fvg/A horse races alongside a moving train.mp4" type="video/mp4">
             </video>
@@ -352,7 +351,7 @@
             </video>
           </div>
           <div class="video-col">
-            <h3>Wan2.2 Factorized </h3>
+            <h3>Anchored Wan2.2 </h3>
             <video autoplay muted loop playsinline preload="metadata">
               <source src="./static/videos/fvg/A timelapse of ice cream melting during a hot day..mp4" type="video/mp4">
             </video>
@@ -371,7 +370,7 @@
             </video>
           </div>
           <div class="video-col">
-            <h3>Wan2.2 Factorized </h3>
+            <h3>Anchored Wan2.2 </h3>
             <video autoplay muted loop playsinline preload="metadata">
               <source src="./static/videos/fvg/A paper plane flying above a knitted vase.mp4" type="video/mp4">
             </video>
@@ -391,7 +390,7 @@
             </video>
           </div>
           <div class="video-col">
-            <h3>Wan2.2 Factorized </h3>
+            <h3>Anchored Wan2.2 </h3>
             <video autoplay muted loop playsinline preload="metadata">
               <source src="./static/videos/fvg/A person sketches in a park and a chicken lays an egg.mp4" type="video/mp4">
             </video>
@@ -411,7 +410,7 @@
             </video>
           </div>
           <div class="video-col">
-            <h3>Wan2.2 Factorized </h3>
+            <h3>Anchored Wan2.2 </h3>
             <video autoplay muted loop playsinline preload="metadata">
               <source src="./static/videos/fvg/A squirrel types on a laptop and a bat hangs from a charging cable.mp4" type="video/mp4">
             </video>
@@ -430,7 +429,7 @@
             </video>
           </div>
           <div class="video-col">
-            <h3>Wan2.2 Factorized </h3>
+            <h3>Anchored Wan2.2 </h3>
             <video autoplay muted loop playsinline preload="metadata">
               <source src="./static/videos/fvg/A timelapse of a piece of metal gradually rusting when exposed to moisture..mp4" type="video/mp4">
             </video>
@@ -450,7 +449,7 @@
             </video>
           </div>
           <div class="video-col">
-            <h3>Wan2.2 Factorized </h3>
+            <h3>Anchored Wan2.2 </h3>
             <video autoplay muted loop playsinline preload="metadata">
               <source src="./static/videos/fvg/A green rose gradually transitions to a shade of blue.mp4" type="video/mp4">
             </video>
@@ -469,7 +468,7 @@
             </video>
           </div>
           <div class="video-col">
-            <h3>Wan2.2 Factorized </h3>
+            <h3>Anchored Wan2.2 </h3>
             <video autoplay muted loop playsinline preload="metadata">
               <source src="./static/videos/fvg/The icicle forms, going from a single droplet to a long, pointed shape as water freezes layer by layer..mp4" type="video/mp4">
             </video>
@@ -488,7 +487,7 @@
             </video>
           </div>
           <div class="video-col">
-            <h3>Wan2.2 Factorized </h3>
+            <h3>Anchored Wan2.2 </h3>
             <video autoplay muted loop playsinline preload="metadata">
               <source src="./static/videos/fvg/The ink on the canvas changing from blue to green..mp4" type="video/mp4">
             </video>
@@ -503,12 +502,12 @@
 
 
 
-    <!-- Text Upsampling vs Factorized T2V Section -->
+    <!-- Text Upsampling vs Anchored T2V Section -->
   <section class="section">
     <div class="container is-max-desktop">
-      <h2 class="title is-2 has-text-centered">Text Upsampling vs Factorized Video Generation</h2>
+      <h2 class="title is-2 has-text-centered">Text Upsampling vs Anchored Video Generation</h2>
       <p class="section-description">
-        Here we compare videos generated with a text-uppsampling variant of the T2V model to our factorized  model.
+        Here we compare videos generated with a text-uppsampling variant of the T2V model to our Anchored  model.
       </p>
 
       <!-- 1 -->
@@ -522,7 +521,7 @@
             </video>
           </div>
           <div class="video-col">
-            <h3>Wan2.2 Factorized  </h3>
+            <h3>Anchored Wan2.2  </h3>
             <video autoplay muted loop playsinline preload="metadata">
               <source src="./static/videos/fvg/A cat DJ at a party, a dog dances with glow sticks.mp4" type="video/mp4">
             </video>
@@ -541,7 +540,7 @@
             </video>
           </div>
           <div class="video-col">
-            <h3>Wan2.2 Factorized  </h3>
+            <h3>Anchored Wan2.2  </h3>
             <video autoplay muted loop playsinline preload="metadata">
               <source src="./static/videos/fvg/A cat takes selfies while a dog rides a skateboard in the background..mp4" type="video/mp4">
             </video>
@@ -560,7 +559,7 @@
             </video>
           </div>
           <div class="video-col">
-            <h3>Wan2.2 Factorized  </h3>
+            <h3>Anchored Wan2.2  </h3>
             <video autoplay muted loop playsinline preload="metadata">
               <source src="./static/videos/fvg/A frog plays drums on lily pads, a snail sways along with the beats.mp4" type="video/mp4">
             </video>
@@ -579,7 +578,7 @@
             </video>
           </div>
           <div class="video-col">
-            <h3>Wan2.2 Factorized  </h3>
+            <h3>Anchored Wan2.2  </h3>
             <video autoplay muted loop playsinline preload="metadata">
               <source src="./static/videos/fvg/Five fish swim gracefully in the sea..mp4" type="video/mp4">
             </video>
@@ -598,7 +597,7 @@
             </video>
           </div>
           <div class="video-col">
-            <h3>Wan2.2 Factorized  </h3>
+            <h3>Anchored Wan2.2  </h3>
             <video autoplay muted loop playsinline preload="metadata">
               <source src="./static/videos/fvg/Five trucks move along the road.mp4" type="video/mp4">
             </video>
@@ -617,7 +616,7 @@
             </video>
           </div>
           <div class="video-col">
-            <h3>Wan2.2 Factorized  </h3>
+            <h3>Anchored Wan2.2  </h3>
             <video autoplay muted loop playsinline preload="metadata">
               <source src="./static/videos/fvg/Rabbit police officer directs traffic.mp4" type="video/mp4">
             </video>
@@ -636,7 +635,7 @@
             </video>
           </div>
           <div class="video-col">
-            <h3>Wan2.2 Factorized  </h3>
+            <h3>Anchored Wan2.2  </h3>
             <video autoplay muted loop playsinline preload="metadata">
               <source src="./static/videos/fvg/The flower is wilting and losing its vibrant color..mp4" type="video/mp4">
             </video>
@@ -655,7 +654,7 @@
             </video>
           </div>
           <div class="video-col">
-            <h3>Wan2.2 Factorized  </h3>
+            <h3>Anchored Wan2.2  </h3>
             <video autoplay muted loop playsinline preload="metadata">
               <source src="./static/videos/fvg/The ink on the canvas changing from blue to green..mp4" type="video/mp4">
             </video>
