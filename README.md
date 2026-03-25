@@ -2,7 +2,7 @@
 
 
 
-<h1>✨ Factorized Video Generation (FVG) </h1>
+<h1>✨ Anchored Video Generation (AVG) </h1>
 <h3>Decoupling Scene Construction and Temporal Synthesis in Text-to-Video Diffusion Models</h3>
 
 Mariam Hassan* · Bastien Van Delft* · Wuyang Li · Alexandre Alahi  
@@ -10,7 +10,7 @@ VITA @ EPFL
 *Equal contribution
 
 <a href="https://arxiv.org/abs/2512.16371"><img src="https://img.shields.io/badge/arXiv-2512.16371-b31b1b"></a>
-<a href="https://vita-epfl.github.io/FVG/"><img src="https://img.shields.io/badge/Project-Page-green"></a>
+<a href="https://vita-epfl.github.io/AVG/"><img src="https://img.shields.io/badge/Project-Page-green"></a>
 
 </div>
 
@@ -18,7 +18,7 @@ VITA @ EPFL
 ## 📌 Overview
 https://github.com/user-attachments/assets/f8d6371c-ecc9-4bcb-a862-5dd6e9838dc8
 
-State-of-the-art Text-to-Video (T2V) diffusion models can generate visually impressive results, yet they still frequently fail to compose complex scenes or follow logical temporal instructions. We introduce Factorized Video Generation (FVG), a pipeline that decouples T2V generation into three specialized stages:
+State-of-the-art Text-to-Video (T2V) diffusion models can generate visually impressive results, yet they still frequently fail to compose complex scenes or follow logical temporal instructions. We introduce Anchored Video Generation (AVG), a pipeline that decouples T2V generation into three specialized stages:
 
 1) **Reasoning** (LLM rewrites prompt to an initial-scene description),  
 2) **Composition** (T2I generates a high-quality anchor frame),  
