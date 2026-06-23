@@ -24,7 +24,7 @@ State-of-the-art Text-to-Video (T2V) diffusion models can generate visually impr
 2) **Composition** (T2I generates a high-quality anchor frame),  
 3) **Temporal Synthesis** (video model animates the anchored scene).
 
-FVG improves performance on T2V benchmarks and enables faster sampling via visual anchoring.
+AVG improves performance on T2V benchmarks and enables faster sampling via visual anchoring.
 
 ## 🚧 Code
 Code is **coming soon**. We’ll release training + inference and evaluation scripts.
