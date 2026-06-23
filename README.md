@@ -33,8 +33,8 @@ Code is **coming soon**. We’ll release training + inference and evaluation scr
 ## Citation
 ```bibtex
 @misc{hassan2025factorized,
-  title        = {Factorized Video Generation: Decoupling Scene Construction and Temporal Synthesis in Text-to-Video Diffusion Models},
-  author       = {Hassan, Mariam and Van Delft, Bastien and Li, Wuyang and Alahi, Alexandre},
+  title        = {Anchored Video Generation: Decoupling Scene Construction and Temporal Synthesis in Text-to-Video Diffusion Models},
+  author       = {Hassan, Mariam and van Delft, Bastien and Li, Wuyang and Alahi, Alexandre},
   year         = {2025},
   eprint       = {2512.16371},
   archivePrefix= {arXiv},
